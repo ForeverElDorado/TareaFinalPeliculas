@@ -90,21 +90,20 @@ class ManejadorSAX extends DefaultHandler {
         } else if (qName.equals("Director")) {
             cadena_resultado = cadena_resultado + "Director: ".trim();
 
-        }/* else if (qName.equals("Reparto")) {
+        } else if (qName.equals("actor")) {
             //ALOMEJOR PONER DOS VECES SI HAY DOS ACTORES
             cadena_resultado = cadena_resultado + "Actor: " + attributes.getValue(attributes.getQName(0).trim());
 
-        }*/ else if (qName.equals("Genero")) {
+        } else if (qName.equals("Genero")) {
             cadena_resultado = cadena_resultado + "Género: ".trim();
 
         } else if (qName.equals("estrenada_en")) {
             cadena_resultado = cadena_resultado + "Estrenada en: ".trim();
 
-//        } else if (qName.equals("Nominaciones")) {
-//            //ALOMEJOR PONER DOS VECES SI HAY DOS ACTORES
-//            cadena_resultado = cadena_resultado + "Nominado a: " + attributes.getValue(attributes.getQName(0).trim());
-//
-//        }
+        } else if (qName.equals("categoria")) {
+            //ALOMEJOR PONER DOS VECES SI HAY DOS ACTORES
+            cadena_resultado = cadena_resultado + "Nominado a: " + attributes.getValue(attributes.getQName(0).trim());
+
         }
     }
 
