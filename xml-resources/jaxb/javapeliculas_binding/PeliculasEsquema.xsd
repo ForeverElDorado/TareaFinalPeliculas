@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+	<xsd:element name="Peliculas">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="Pelicula" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Titulo" type="xsd:string"/>
+							<xsd:element name="Director" type="xsd:string"/>
+							<xsd:element name="Genero" type="xsd:string"/>
+							<xsd:element name="estrenada_en	" type="xsd:string"/>
+						</xsd:sequence>
+						<xsd:attribute name="id_IMBD" type="xsd:string"/>
+						<xsd:attribute name="nombre" type="xsd:string"/>
+						<xsd:attribute name="categoria" type="xsd:string"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

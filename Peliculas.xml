@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Peliculas xsi:noNameSpaceSchemaLocation="PeliculasEsquema.xsd"
+	xmlns:xsi="http://www.w3.org/2001/2001/XMLSchema-instance">
+	<Pelicula id_IMBD="001">
+		<Titulo>The Shawshank Redemtion</Titulo>
+		<Director>Frank Darabont</Director>
+		<Reparto>
+			<actor nombre="Morgan Freeman como Ellis Boyd"></actor>
+			<actor nombre="Tim Robbins como Andy Dufresne"></actor>
+		</Reparto>
+		<Genero>Drama</Genero>
+		<estrenada_en> 1995</estrenada_en>
+		<Nominaciones>
+			<premio categoria="Mejor Pelicula Extranjera de Academia Japonesa"></premio>
+		</Nominaciones>
+	</Pelicula>
+	<Pelicula id_IMBD="002">
+		<Titulo>Dead Proof</Titulo>
+		<Director>Quentin Tarantino</Director>
+		<Reparto>
+			<actor nombre="Quentin Tarantino como Warren"></actor>
+			<actor nombre="Kurt Russel como Stuntman Mike"></actor>
+			<actor nombre="Vanesa Ferlito como Arlene"></actor>
+		</Reparto>
+		<Genero>Acion, Suspenso</Genero>
+		<estrenada_en> 2007</estrenada_en>
+		<Nominaciones>
+			<premio categoria="Palme d'Or en el Festival de Cannes"></premio>
+		</Nominaciones>
+	</Pelicula>
+	<Pelicula id_IMBD="003">
+		<Titulo>Hot Fuzz</Titulo>
+		<Director>Edward Wright</Director>
+		<Reparto>
+			<actor nombre="Simon Pegg como Nicholas Angel"></actor>
+			<actor nombre="	Nick Frost como PC Danny Butterman"></actor>
+		</Reparto>
+		<Genero>Comedia, Accion</Genero>
+		<estrenada_en> 2007</estrenada_en>
+		<Nominaciones>
+			<premio categoria="Ninguna"></premio>
+		</Nominaciones>
+	</Pelicula>
+	<Pelicula id_IMBD="004">
+		<Titulo>The Lighthouse</Titulo>
+		<Director>Robert Eggers</Director>
+		<Reparto>
+			<actor nombre="Robert Pattison como Thomas Howard"></actor>
+			<actor nombre="William Dafoe comp Thomas Wade"></actor>
+		</Reparto>
+		<Genero>Terror psicologico</Genero>
+		<estrenada_en> 2019</estrenada_en>
+		<Nominaciones>
+			<premio categoria="Mejor Actor de Drama en Premio Satellite"></premio>
+		</Nominaciones>
+	</Pelicula>
+	<Pelicula id_IMBD="005">
+		<Titulo>Onward</Titulo>
+		<Director>Robert Eggers</Director>
+		<Reparto>
+			<actor nombre="Tom Holland como Ian Lightfoot"></actor>
+			<actor nombre="Chris Pratt como Barley Lightfoot"></actor>
+		</Reparto>
+		<Genero>Animacion, Fantasia</Genero>
+		<estrenada_en> 2020</estrenada_en>
+		<Nominaciones>
+			<premio categoria="Ninguna"></premio>
+		</Nominaciones>
+	</Pelicula>
+</Peliculas>
