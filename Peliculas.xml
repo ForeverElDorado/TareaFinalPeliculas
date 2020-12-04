@@ -5,7 +5,7 @@
 		<Titulo>The Shawshank Redemtion</Titulo>
 		<Director>Frank Darabont</Director>
 		<Reparto>
-			<actor nombre="Morgan Freeman como Ellis Boyd"></actor>
+			<actor nombre="Morgan Freeman"></actor>
 			<actor nombre="Tim Robbins como Andy Dufresne"></actor>
 		</Reparto>
 		<Genero>Drama</Genero>
