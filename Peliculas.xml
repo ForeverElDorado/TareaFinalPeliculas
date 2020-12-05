@@ -6,7 +6,7 @@
 		<Director>Frank Darabont</Director>
 		<Reparto>
 			<actor nombre="Morgan Freeman"></actor>
-			<actor nombre="Tim Robbins como Andy Dufresne"></actor>
+			<actor nombre="Tim Robbins"></actor>
 		</Reparto>
 		<Genero>Drama</Genero>
 		<estrenada_en> 1995</estrenada_en>
@@ -18,11 +18,11 @@
 		<Titulo>Dead Proof</Titulo>
 		<Director>Quentin Tarantino</Director>
 		<Reparto>
-			<actor nombre="Quentin Tarantino como Warren"></actor>
-			<actor nombre="Kurt Russel como Stuntman Mike"></actor>
-			<actor nombre="Vanesa Ferlito como Arlene"></actor>
+			<actor nombre="Quentin Tarantino"></actor>
+			<actor nombre="Kurt Russel"></actor>
+			<actor nombre="Vanesa Ferlito"></actor>
 		</Reparto>
-		<Genero>Acion, Suspenso</Genero>
+		<Genero>Accion</Genero>
 		<estrenada_en> 2007</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Palme d'Or en el Festival de Cannes"></premio>
@@ -32,10 +32,11 @@
 		<Titulo>Hot Fuzz</Titulo>
 		<Director>Edward Wright</Director>
 		<Reparto>
-			<actor nombre="Simon Pegg como Nicholas Angel"></actor>
-			<actor nombre="	Nick Frost como PC Danny Butterman"></actor>
+			<actor nombre="Simon Pegg"></actor>
+			<actor nombre="	Nick Frost"></actor>
+			<actor nombre="Morgan Freeman"></actor>
 		</Reparto>
-		<Genero>Comedia, Accion</Genero>
+		<Genero>Comedia</Genero>
 		<estrenada_en> 2007</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Ninguna"></premio>
@@ -45,10 +46,11 @@
 		<Titulo>The Lighthouse</Titulo>
 		<Director>Robert Eggers</Director>
 		<Reparto>
-			<actor nombre="Robert Pattison como Thomas Howard"></actor>
-			<actor nombre="William Dafoe comp Thomas Wade"></actor>
+			<actor nombre="Robert Pattison"></actor>
+			<actor nombre="William Dafoe"></actor>
+			<actor nombre="Quentin Tarantino"></actor>
 		</Reparto>
-		<Genero>Terror psicologico</Genero>
+		<Genero>Drama</Genero>
 		<estrenada_en> 2019</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Mejor Actor de Drama en Premio Satellite"></premio>
@@ -58,10 +60,10 @@
 		<Titulo>Onward</Titulo>
 		<Director>Robert Eggers</Director>
 		<Reparto>
-			<actor nombre="Tom Holland como Ian Lightfoot"></actor>
-			<actor nombre="Chris Pratt como Barley Lightfoot"></actor>
+			<actor nombre="Tom Holland"></actor>
+			<actor nombre="Chris Pratt"></actor>
 		</Reparto>
-		<Genero>Animacion, Fantasia</Genero>
+		<Genero>Comedia</Genero>
 		<estrenada_en> 2020</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Ninguna"></premio>

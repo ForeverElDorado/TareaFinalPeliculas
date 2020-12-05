@@ -135,8 +135,18 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextAreaConsulta);
 
         jButtonBuscarPorActor.setText("Ejecutar");
+        jButtonBuscarPorActor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarPorActorActionPerformed(evt);
+            }
+        });
 
         jButtonBuscarPorGenero.setText("Ejecutar");
+        jButtonBuscarPorGenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarPorGeneroActionPerformed(evt);
+            }
+        });
 
         jButtonSoloPeliculas.setText("Ejecutar");
         jButtonSoloPeliculas.addActionListener(new java.awt.event.ActionListener() {
@@ -314,12 +324,31 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAbrirConSAXActionPerformed
 
     private void jButtonSoloPeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSoloPeliculasActionPerformed
-
+        //Aqui se muestran todas las peliculas
         String salida;
-        String apaño = "//Director";
-        salida = gesXpath.Ejecutar_XPath(this.jTextFieldActor.getText());
+        String comanda;
+        comanda = "//Titulo";
+        salida = gesXpath.Ejecutar_XPath(comanda);
         this.jTextAreaConsulta.setText(salida);
     }//GEN-LAST:event_jButtonSoloPeliculasActionPerformed
+
+    private void jButtonBuscarPorActorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarPorActorActionPerformed
+        //COMANDA DE BUSCAR PELICULA EN LA QUE SALE EL ACTOR SELECCIONADO
+        String salida;
+        String comanda;
+        comanda = "//" + jTextFieldActor.getText();
+        salida = gesXpath.Ejecutar_XPath(comanda);
+        this.jTextAreaConsulta.setText(salida);
+    }//GEN-LAST:event_jButtonBuscarPorActorActionPerformed
+
+    private void jButtonBuscarPorGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarPorGeneroActionPerformed
+        //Aqui se muestran las peliculas con el GENERO seleccionado
+        String salida;
+        String comanda;
+        comanda = "//" + jTextFieldActor.getText();
+        salida = gesXpath.Ejecutar_XPath(comanda);
+        this.jTextAreaConsulta.setText(salida);
+    }//GEN-LAST:event_jButtonBuscarPorGeneroActionPerformed
 
     /**
      * @param args the command line arguments

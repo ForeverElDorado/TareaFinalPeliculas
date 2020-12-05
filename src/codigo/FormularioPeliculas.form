@@ -304,11 +304,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ejecutar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBuscarPorActorActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonBuscarPorGenero">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ejecutar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBuscarPorGeneroActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonSoloPeliculas">
       <Properties>
