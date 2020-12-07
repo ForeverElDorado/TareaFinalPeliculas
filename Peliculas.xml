@@ -9,7 +9,7 @@
 			<actor nombre="Tim Robbins"></actor>
 		</Reparto>
 		<Genero>Drama</Genero>
-		<estrenada_en> 1995</estrenada_en>
+		<estrenada_en>1995</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Mejor Pelicula Extranjera de Academia Japonesa"></premio>
 		</Nominaciones>
@@ -23,7 +23,7 @@
 			<actor nombre="Vanesa Ferlito"></actor>
 		</Reparto>
 		<Genero>Accion</Genero>
-		<estrenada_en> 2007</estrenada_en>
+		<estrenada_en>2007</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Palme d'Or en el Festival de Cannes"></premio>
 		</Nominaciones>
@@ -37,7 +37,7 @@
 			<actor nombre="Morgan Freeman"></actor>
 		</Reparto>
 		<Genero>Comedia</Genero>
-		<estrenada_en> 2007</estrenada_en>
+		<estrenada_en>2007</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Ninguna"></premio>
 		</Nominaciones>
@@ -51,7 +51,7 @@
 			<actor nombre="Quentin Tarantino"></actor>
 		</Reparto>
 		<Genero>Drama</Genero>
-		<estrenada_en> 2019</estrenada_en>
+		<estrenada_en>2019</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Mejor Actor de Drama en Premio Satellite"></premio>
 		</Nominaciones>
@@ -64,7 +64,7 @@
 			<actor nombre="Chris Pratt"></actor>
 		</Reparto>
 		<Genero>Comedia</Genero>
-		<estrenada_en> 2020</estrenada_en>
+		<estrenada_en>2020</estrenada_en>
 		<Nominaciones>
 			<premio categoria="Ninguna"></premio>
 		</Nominaciones>

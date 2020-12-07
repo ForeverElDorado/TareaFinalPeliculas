@@ -17,6 +17,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     SAX gesSAX = new SAX();
     JAXB gesJAXB = new JAXB();
     Xpath gesXpath = new Xpath();
+    DOM gesDom = new DOM();
 
     /**
      * Creates new form Formulario
@@ -47,7 +48,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         jButtonModificarTitulo = new javax.swing.JButton();
         jButtonAñadir = new javax.swing.JButton();
         jButtonMostrarJAXB = new javax.swing.JButton();
-        jTextFieldTitulo = new javax.swing.JTextField();
+        jTextFieldDicerctor = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jButtonAbrirConSAX = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -60,6 +61,18 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         jButtonSoloPeliculas = new javax.swing.JButton();
         jTextFieldActor = new javax.swing.JTextField();
         jTextFieldGenero = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextFieldCodigo = new javax.swing.JTextField();
+        jTextFieldTitulo = new javax.swing.JTextField();
+        jTextFieldEstreno = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jTextFieldGeneroAñadir = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jTextFieldActorAñadir = new javax.swing.JTextField();
+        jTextFieldPremio = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -155,6 +168,18 @@ public class FormularioPeliculas extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Código IMBD:");
+
+        jLabel10.setText("Titulo:");
+
+        jLabel11.setText("Fecha de estreno:");
+
+        jLabel12.setText("Genero:");
+
+        jLabel13.setText("Actor:");
+
+        jLabel14.setText("Nominacion:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -168,20 +193,6 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                             .addComponent(jButtonAbrirConSAX)))
                     .addComponent(jLabelMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldIDNuevo)
-                            .addComponent(jTextFieldIDAntiguo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonModificarTitulo)
-                            .addComponent(jButtonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(97, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -198,14 +209,8 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel9)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButtonSoloPeliculas))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel2)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jButtonAñadir)))
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                                .addComponent(jButtonSoloPeliculas)))
+                                        .addGap(0, 260, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -222,7 +227,66 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel14)
+                                .addGap(18, 18, 18)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldPremio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldIDNuevo)
+                                    .addComponent(jTextFieldIDAntiguo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonModificarTitulo)
+                                    .addComponent(jButtonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldDicerctor, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldEstreno, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldGeneroAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonAñadir)
+                                .addGap(255, 255, 255))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldActorAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,12 +316,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                             .addComponent(jButtonSoloPeliculas))
                         .addGap(8, 8, 8)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonAñadir))
-                        .addGap(1, 1, 1)
+                        .addGap(30, 30, 30)
                         .addComponent(jButtonMostrarJAXB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonMostrarDOM)
@@ -272,7 +331,28 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                             .addComponent(jTextFieldIDNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonModificarTitulo)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldEstreno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldDicerctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAñadir)
+                    .addComponent(jLabel12)
+                    .addComponent(jTextFieldGeneroAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addComponent(jTextFieldActorAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPremio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(2, 2, 2))
         );
 
         pack();
@@ -291,7 +371,22 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonModificarTituloActionPerformed
 
     private void jButtonAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAñadirActionPerformed
+        //PARA AÑADIR PELICULA NUEVA EN EL XML
+        //ORDEN : titulo director genero estreno codigo
+        if (gesDom.añadirDOM(this.jTextFieldTitulo.getText(), this.jTextFieldDicerctor.getText(), this.jTextFieldActorAñadir.getText(), this.jTextFieldGeneroAñadir.getText(), this.jTextFieldEstreno.getText(), this.jTextFieldCodigo.getText(), this.jTextFieldPremio.getText()) == -1) {
+            this.jLabelMensaje.setText("Error al añadir el nodo");
+        } else {
+            this.jLabelMensaje.setText("Nodo añadido correctamente");
+//            String salida = "";
+//            salida = gesDom.recorrerDOMyMostrar();
+//            this.jTextAreaDOM.setText(salida);
+            if (gesDom.guardarDOMcomoFILE() == -1) {
+                this.jLabelMensaje.setText("Error al guardar el fichero");
+            } else {
+                this.jLabelMensaje.setText("Fichero guardado correctamente");
+            }
 
+        }
     }//GEN-LAST:event_jButtonAñadirActionPerformed
 
     private void jButtonMostrarJAXBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarJAXBActionPerformed
@@ -311,12 +406,13 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                 this.jLabelMensaje.setText("Error al crear el objeto SAX.");
 
             } else {
-                //AÑADO EL ABRIR JAXB PARA QUE TAMBIEN ESTE ABIERTO PERO SE MUESTRA EL SAX SOLO
-                if ((gesJAXB.abrir_XML_JAXB(ficheroXML) == 0) && (gesXpath.abrir_XML(ficheroXML) == 0)) {
+                //AÑADO EL ABRIR JAXB PARA QUE TAMBIEN ESTE ABIERTO PERO SE MUESTRA EL SAX SOLO)
+                if ((gesJAXB.abrir_XML_JAXB(ficheroXML) == 0) && (gesXpath.abrir_XML(ficheroXML) == 0) && (gesDom.abrir_XML_DOM(ficheroXML) == 0)) {
                     this.jLabelMensaje.setText("Abierto correctamente.");
                     String salida = gesSAX.recorrerSAX();
                     this.jTextAreaDOM.setText(salida);
                     this.jButtonModificarTitulo.setEnabled(true);
+                    this.jButtonAñadir.setEnabled(true);
                 }
             }
         }
@@ -396,7 +492,13 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMostrarDOM;
     private javax.swing.JButton jButtonMostrarJAXB;
     private javax.swing.JButton jButtonSoloPeliculas;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -409,9 +511,15 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextAreaConsulta;
     private javax.swing.JTextArea jTextAreaDOM;
     private javax.swing.JTextField jTextFieldActor;
+    private javax.swing.JTextField jTextFieldActorAñadir;
+    private javax.swing.JTextField jTextFieldCodigo;
+    private javax.swing.JTextField jTextFieldDicerctor;
+    private javax.swing.JTextField jTextFieldEstreno;
     private javax.swing.JTextField jTextFieldGenero;
+    private javax.swing.JTextField jTextFieldGeneroAñadir;
     private javax.swing.JTextField jTextFieldIDAntiguo;
     private javax.swing.JTextField jTextFieldIDNuevo;
+    private javax.swing.JTextField jTextFieldPremio;
     private javax.swing.JTextField jTextFieldTitulo;
     // End of variables declaration//GEN-END:variables
 
