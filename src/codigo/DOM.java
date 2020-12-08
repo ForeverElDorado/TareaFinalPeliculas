@@ -137,7 +137,7 @@ public class DOM {
             Node npelicula = doc.createElement("Pelicula");
             ((Element) npelicula).setAttribute("id_IMBD", codigo);
 
-            //Se añade a libro el nodo autor y titulo creados antes
+            //Se añade a pelicula los nodos creados antes
             npelicula.appendChild(ntitulo);
             npelicula.appendChild(ndirector);
             npelicula.appendChild(ngenero);
@@ -157,7 +157,7 @@ public class DOM {
 
     public int guardarDOMcomoFILE() {
         try {
-            //Crea un fichero llamado salida.xml
+            //Crea un fichero .xml
             File archivo_xml = new File("NuevaPelicula.xml");
             //Especifica el formato de salida
             OutputFormat format = new OutputFormat(doc);

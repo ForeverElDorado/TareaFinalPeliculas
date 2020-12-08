@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Peliculas>
+    <Pelicula id_IMBD="001">
+        <Titulo>The Shawshank Redemtion</Titulo>
+        <Director>Frank Darabont</Director>
+        <Genero>Drama</Genero>
+    </Pelicula>
+    <Pelicula id_IMBD="002">
+        <Titulo>Dead Proof</Titulo>
+        <Director>Quentin Tarantino</Director>
+        <Genero>Accion</Genero>
+    </Pelicula>
+    <Pelicula id_IMBD="003">
+        <Titulo>Hot Fuzz</Titulo>
+        <Director>Edward Wright</Director>
+        <Genero>Comedia</Genero>
+    </Pelicula>
+    <Pelicula id_IMBD="004">
+        <Titulo>El Faro</Titulo>
+        <Director>Robert Eggers</Director>
+        <Genero>Drama</Genero>
+    </Pelicula>
+    <Pelicula id_IMBD="005">
+        <Titulo>Enmarcha</Titulo>
+        <Director>Robert Eggers</Director>
+        <Genero>Comedia</Genero>
+    </Pelicula>
+</Peliculas>

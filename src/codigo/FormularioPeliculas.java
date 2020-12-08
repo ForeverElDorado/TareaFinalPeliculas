@@ -350,7 +350,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     private void jButtonAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAñadirActionPerformed
         //PARA AÑADIR PELICULA NUEVA EN EL XML
         //ORDEN : titulo director genero estreno codigo
-        if (gesDom.añadirDOM(this.jTextFieldTitulo.getText(), this.jTextFieldDicerctor.getText(), this.jTextFieldActorAñadir.getText(), this.jTextFieldGeneroAñadir.getText(), this.jTextFieldEstreno.getText(), this.jTextFieldCodigo.getText(), this.jTextFieldPremio.getText()) == -1) {
+        if (gesDom.añadirDOM(this.jTextFieldTitulo.getText(), this.jTextFieldDicerctor.getText(), this.jTextFieldActorAñadir.getText(), this.jTextFieldGeneroAñadir.getText(), this.jTextFieldEstreno.getText(), this.jTextFieldPremio.getText(), this.jTextFieldCodigo.getText()) == -1) {
             this.jLabelMensaje.setText("Error al añadir el nodo");
         } else {
             this.jLabelMensaje.setText("Nodo añadido correctamente");

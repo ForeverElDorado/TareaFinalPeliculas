@@ -68,12 +68,12 @@
             <premio categoria="Ninguna"/>
         </Nominaciones>
     </Pelicula>
-    <Pelicula id_IMBD="asdasd">
-        <Titulo>asd</Titulo>
-        <Director>asdsad</Director>
-        <Genero>asdas</Genero>
-        <estrenada_en>asdasd</estrenada_en>
-        <actor>asda</actor>
-        <nominacion>asd</nominacion>
+    <Pelicula id_IMBD="006">
+        <Titulo>Kill Bill</Titulo>
+        <Director>Quentin tarantino</Director>
+        <Genero>Accion</Genero>
+        <estrenada_en>2012</estrenada_en>
+        <actor>samuel L Jackson</actor>
+        <nominacion>Ninguna</nominacion>
     </Pelicula>
 </Peliculas>
