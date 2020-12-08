@@ -54,7 +54,7 @@ public class JAXB {
         return cadena_resultado;
     }
 
-    public void modificarJAXBparaTituloLibro(String tituloAntiguo, String tituloNuevo) {
+    public void modificarJAXBparaTituloPelicula(String tituloAntiguo, String tituloNuevo) {
         //PARA MODIFICAR TITULO
         List<Peliculas.Pelicula> lpeliculas = misPeliculas.getPelicula();
         for (int i = 0; i < lpeliculas.size(); i++) {

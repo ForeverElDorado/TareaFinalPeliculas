@@ -7,8 +7,6 @@ package codigo;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.Attributes;
@@ -101,7 +99,6 @@ class ManejadorSAX extends DefaultHandler {
             cadena_resultado = cadena_resultado + "Estrenada en: ".trim();
 
         } else if (qName.equals("categoria")) {
-            //ALOMEJOR PONER DOS VECES SI HAY DOS ACTORES
             cadena_resultado = cadena_resultado + "Nominado a: " + attributes.getValue(attributes.getQName(0).trim());
 
         }

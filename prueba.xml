@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Peliculas xmlns:xsi="http://www.w3.org/2001/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="PeliculasEsquema.xsd">
+    <Pelicula id_IMBD="001">
+        <Titulo>The Shawshank Redemtion</Titulo>
+        <Director>Frank Darabont</Director>
+        <Reparto>
+            <actor nombre="Morgan Freeman"/>
+            <actor nombre="Tim Robbins"/>
+        </Reparto>
+        <Genero>Drama</Genero>
+        <estrenada_en>1995</estrenada_en>
+        <Nominaciones>
+            <premio categoria="Mejor Pelicula Extranjera de Academia Japonesa"/>
+        </Nominaciones>
+    </Pelicula>
+    <Pelicula id_IMBD="002">
+        <Titulo>Dead Proof</Titulo>
+        <Director>Quentin Tarantino</Director>
+        <Reparto>
+            <actor nombre="Quentin Tarantino"/>
+            <actor nombre="Kurt Russel"/>
+            <actor nombre="Vanesa Ferlito"/>
+        </Reparto>
+        <Genero>Accion</Genero>
+        <estrenada_en>2007</estrenada_en>
+        <Nominaciones>
+            <premio categoria="Palme d'Or en el Festival de Cannes"/>
+        </Nominaciones>
+    </Pelicula>
+    <Pelicula id_IMBD="003">
+        <Titulo>Hot Fuzz</Titulo>
+        <Director>Edward Wright</Director>
+        <Reparto>
+            <actor nombre="Simon Pegg"/>
+            <actor nombre=" Nick Frost"/>
+            <actor nombre="Morgan Freeman"/>
+        </Reparto>
+        <Genero>Comedia</Genero>
+        <estrenada_en>2007</estrenada_en>
+        <Nominaciones>
+            <premio categoria="Ninguna"/>
+        </Nominaciones>
+    </Pelicula>
+    <Pelicula id_IMBD="004">
+        <Titulo>The Lighthouse</Titulo>
+        <Director>Robert Eggers</Director>
+        <Reparto>
+            <actor nombre="Robert Pattison"/>
+            <actor nombre="William Dafoe"/>
+            <actor nombre="Quentin Tarantino"/>
+        </Reparto>
+        <Genero>Drama</Genero>
+        <estrenada_en>2019</estrenada_en>
+        <Nominaciones>
+            <premio categoria="Mejor Actor de Drama en Premio Satellite"/>
+        </Nominaciones>
+    </Pelicula>
+    <Pelicula id_IMBD="005">
+        <Titulo>Onward</Titulo>
+        <Director>Robert Eggers</Director>
+        <Reparto>
+            <actor nombre="Tom Holland"/>
+            <actor nombre="Chris Pratt"/>
+        </Reparto>
+        <Genero>Comedia</Genero>
+        <estrenada_en>2020</estrenada_en>
+        <Nominaciones>
+            <premio categoria="Ninguna"/>
+        </Nominaciones>
+    </Pelicula>
+    <Pelicula id_IMBD="asdasd">
+        <Titulo>asd</Titulo>
+        <Director>asdsad</Director>
+        <Genero>asdas</Genero>
+        <estrenada_en>asdasd</estrenada_en>
+        <actor>asda</actor>
+        <nominacion>asd</nominacion>
+    </Pelicula>
+</Peliculas>

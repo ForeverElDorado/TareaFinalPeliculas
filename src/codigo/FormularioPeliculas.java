@@ -9,6 +9,8 @@ import java.io.File;
 import javax.swing.JFileChooser;
 
 /**
+ * PROYECTO DE ACCESO A DATOS, FORMULARIOS CON BBDD DE PELICULAS POR ALVARO
+ * GARCIA HERRERO
  *
  * @author aghsk
  */
@@ -54,11 +56,9 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaConsulta = new javax.swing.JTextArea();
-        jButtonBuscarPorActor = new javax.swing.JButton();
-        jButtonBuscarPorGenero = new javax.swing.JButton();
+        jButtonBuscarDirectores = new javax.swing.JButton();
+        jButtonBuscarGeneros = new javax.swing.JButton();
         jButtonSoloPeliculas = new javax.swing.JButton();
-        jTextFieldActor = new javax.swing.JTextField();
-        jTextFieldGenero = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -71,7 +71,6 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         jTextFieldActorAñadir = new javax.swing.JTextField();
         jTextFieldPremio = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextFieldCodIMBDModificar = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,7 +103,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
             }
         });
 
-        jButtonAñadir.setText("Añadir");
+        jButtonAñadir.setText("Añadir Pelicula");
         jButtonAñadir.setEnabled(false);
         jButtonAñadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,9 +120,9 @@ public class FormularioPeliculas extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Películas en las que sale el actor/actriz:");
+        jLabel7.setText("Todos los Directores:");
 
-        jLabel8.setText("Películas de género:");
+        jLabel8.setText("Todos los Géneros:");
 
         jLabel9.setText("Todas las películas:");
 
@@ -131,21 +130,24 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         jTextAreaConsulta.setRows(5);
         jScrollPane2.setViewportView(jTextAreaConsulta);
 
-        jButtonBuscarPorActor.setText("Ejecutar");
-        jButtonBuscarPorActor.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBuscarDirectores.setText("Ejecutar");
+        jButtonBuscarDirectores.setEnabled(false);
+        jButtonBuscarDirectores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarPorActorActionPerformed(evt);
+                jButtonBuscarDirectoresActionPerformed(evt);
             }
         });
 
-        jButtonBuscarPorGenero.setText("Ejecutar");
-        jButtonBuscarPorGenero.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBuscarGeneros.setText("Ejecutar");
+        jButtonBuscarGeneros.setEnabled(false);
+        jButtonBuscarGeneros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarPorGeneroActionPerformed(evt);
+                jButtonBuscarGenerosActionPerformed(evt);
             }
         });
 
         jButtonSoloPeliculas.setText("Ejecutar");
+        jButtonSoloPeliculas.setEnabled(false);
         jButtonSoloPeliculas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSoloPeliculasActionPerformed(evt);
@@ -164,7 +166,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
 
         jLabel14.setText("Nominacion:");
 
-        jLabel15.setText("Cod IMBD:");
+        jLabel15.setText("Escriba aquí para modificar el título de una película:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -180,36 +182,6 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                     .addComponent(jLabelMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel6)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel9)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButtonSoloPeliculas)))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextFieldGenero)
-                                            .addComponent(jTextFieldActor))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButtonBuscarPorActor, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jButtonBuscarPorGenero, javax.swing.GroupLayout.Alignment.TRAILING)))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(102, 102, 102)
-                                .addComponent(jButtonAñadir)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(24, 24, 24))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -217,11 +189,10 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                                 .addGap(19, 19, 19)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel4)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel5))
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel15))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldCodIMBDModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jTextFieldTituloAntiguo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(29, 29, 29)
@@ -230,8 +201,29 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                                         .addComponent(jTextFieldTituloNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(29, 29, 29)
                                         .addComponent(jButtonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 199, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(jLabel9))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jButtonSoloPeliculas)
+                                            .addComponent(jButtonBuscarGeneros)
+                                            .addComponent(jButtonBuscarDirectores)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addComponent(jButtonAñadir)))
+                        .addGap(0, 346, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,14 +252,15 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                         .addComponent(jTextFieldPremio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldEstreno, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextFieldGeneroAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldEstreno, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldGeneroAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -281,28 +274,22 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButtonBuscarPorActor)
-                                    .addComponent(jTextFieldActor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButtonBuscarPorGenero)
-                                .addComponent(jTextFieldGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonBuscarDirectores)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonBuscarGeneros))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(jButtonSoloPeliculas))
                         .addGap(8, 8, 8)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldCodIMBDModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel15)
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(jTextFieldTituloAntiguo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -314,7 +301,7 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                             .addComponent(jButtonGuardar))
                         .addGap(26, 26, 26))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel11)
@@ -342,19 +329,22 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
-         
+        //PARA GUARDAR LOS NUEVOS TITULOS DE LAS PELICULAS COMO UN NUEVO DOCUMENTO XML
         gesJAXB.guardarEstructuraJAXB(this.jTextAreaDOM.getText());
-        
+
         this.jLabelMensaje.setText("Cambios guardados como TitulosNuevos.xml");
     }//GEN-LAST:event_jButtonGuardarActionPerformed
 
     private void jButtonModificarTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarTituloActionPerformed
         //PARA MODIFICAR CON JAXB EL TITULO DE UNA PELICULA
-        gesJAXB.modificarJAXBparaTituloLibro(this.jTextFieldTituloAntiguo.getText(), this.jTextFieldTituloNuevo.getText());
+        gesJAXB.modificarJAXBparaTituloPelicula(this.jTextFieldTituloAntiguo.getText(), this.jTextFieldTituloNuevo.getText());
         String salida = gesJAXB.recorrerJAXB();
         this.jTextAreaDOM.setText(salida);
         this.jButtonGuardar.setEnabled(true);
         this.jLabelMensaje.setText("Cambios efectuados con Exito");
+        this.jButtonBuscarDirectores.setEnabled(false);
+        this.jButtonBuscarGeneros.setEnabled(false);
+        this.jButtonSoloPeliculas.setEnabled(false);
     }//GEN-LAST:event_jButtonModificarTituloActionPerformed
 
     private void jButtonAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAñadirActionPerformed
@@ -378,7 +368,8 @@ public class FormularioPeliculas extends javax.swing.JFrame {
 
     private void jButtonAbrirConSAXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirConSAXActionPerformed
         //SE ABRE EL DOCUMENTO .XML Y SE MUESTRA CON SAX
-        //TAMBIEN SE DEJA ABIERTO EL JAXB
+        //TAMBIEN SE DEJA ABIERTO EL JAXB EL DOM Y EL XPATH PARA ASI PODER USARLOS
+        //SIN TENER QUE RECURRIR A ABRIR DOM/JAXB... LUEGO
         File ficheroXML;
         ficheroXML = dialogoSeleccionarFichero();
 
@@ -387,9 +378,8 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         } else {
             if (gesSAX.abrir_XML_SAX(ficheroXML) == -1) {
                 this.jLabelMensaje.setText("Error al crear el objeto SAX.");
-
             } else {
-                //AÑADO EL ABRIR JAXB PARA QUE TAMBIEN ESTE ABIERTO PERO SE MUESTRA EL SAX SOLO)
+                //AÑADO EL ABRIR JAXB/DOM... PARA QUE TAMBIEN ESTE ABIERTO PERO SE MUESTRA EL SAX SOLO)
                 if ((gesJAXB.abrir_XML_JAXB(ficheroXML) == 0) && (gesXpath.abrir_XML(ficheroXML) == 0) && (gesDom.abrir_XML_DOM(ficheroXML) == 0)) {
                     this.jLabelMensaje.setText("Abierto correctamente.");
                     String salida = gesSAX.recorrerSAX();
@@ -397,6 +387,9 @@ public class FormularioPeliculas extends javax.swing.JFrame {
                     this.jButtonModificarTitulo.setEnabled(true);
                     this.jButtonAñadir.setEnabled(true);
                     this.jButtonModificarTitulo.setEnabled(true);
+                    this.jButtonBuscarDirectores.setEnabled(true);
+                    this.jButtonBuscarGeneros.setEnabled(true);
+                    this.jButtonSoloPeliculas.setEnabled(true);
                 }
             }
         }
@@ -412,23 +405,21 @@ public class FormularioPeliculas extends javax.swing.JFrame {
         this.jTextAreaConsulta.setText(salida);
     }//GEN-LAST:event_jButtonSoloPeliculasActionPerformed
 
-    private void jButtonBuscarPorActorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarPorActorActionPerformed
-        //COMANDA DE BUSCAR PELICULA EN LA QUE SALE EL ACTOR SELECCIONADO
+    private void jButtonBuscarDirectoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarDirectoresActionPerformed
+        //COMANDA DE BUSCAR DIRECTORES
         String salida;
-        String comanda;
-        comanda = "//" + jTextFieldActor.getText();
+        String comanda = "//Director";
         salida = gesXpath.Ejecutar_XPath(comanda);
         this.jTextAreaConsulta.setText(salida);
-    }//GEN-LAST:event_jButtonBuscarPorActorActionPerformed
+    }//GEN-LAST:event_jButtonBuscarDirectoresActionPerformed
 
-    private void jButtonBuscarPorGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarPorGeneroActionPerformed
-        //Aqui se muestran las peliculas con el GENERO seleccionado
+    private void jButtonBuscarGenerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarGenerosActionPerformed
+        //COMANDA DE BUSCAR GENEROSS
         String salida;
-        String comanda;
-        comanda = "//" + jTextFieldActor.getText();
+        String comanda = "//Genero";
         salida = gesXpath.Ejecutar_XPath(comanda);
         this.jTextAreaConsulta.setText(salida);
-    }//GEN-LAST:event_jButtonBuscarPorGeneroActionPerformed
+    }//GEN-LAST:event_jButtonBuscarGenerosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -469,8 +460,8 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAbrirConSAX;
     private javax.swing.JButton jButtonAñadir;
-    private javax.swing.JButton jButtonBuscarPorActor;
-    private javax.swing.JButton jButtonBuscarPorGenero;
+    private javax.swing.JButton jButtonBuscarDirectores;
+    private javax.swing.JButton jButtonBuscarGeneros;
     private javax.swing.JButton jButtonGuardar;
     private javax.swing.JButton jButtonModificarTitulo;
     private javax.swing.JButton jButtonSoloPeliculas;
@@ -493,13 +484,10 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextAreaConsulta;
     private javax.swing.JTextArea jTextAreaDOM;
-    private javax.swing.JTextField jTextFieldActor;
     private javax.swing.JTextField jTextFieldActorAñadir;
-    private javax.swing.JTextField jTextFieldCodIMBDModificar;
     private javax.swing.JTextField jTextFieldCodigo;
     private javax.swing.JTextField jTextFieldDicerctor;
     private javax.swing.JTextField jTextFieldEstreno;
-    private javax.swing.JTextField jTextFieldGenero;
     private javax.swing.JTextField jTextFieldGeneroAñadir;
     private javax.swing.JTextField jTextFieldPremio;
     private javax.swing.JTextField jTextFieldTitulo;
@@ -510,7 +498,6 @@ public class FormularioPeliculas extends javax.swing.JFrame {
     private File dialogoSeleccionarFichero() {
 
         File fichero = null;
-
         JFileChooser fc = new JFileChooser();
         fc.setMultiSelectionEnabled(false);
         fc.setDialogType(JFileChooser.OPEN_DIALOG);

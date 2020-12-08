@@ -158,7 +158,7 @@ public class DOM {
     public int guardarDOMcomoFILE() {
         try {
             //Crea un fichero llamado salida.xml
-            File archivo_xml = new File("prueba.xml");
+            File archivo_xml = new File("NuevaPelicula.xml");
             //Especifica el formato de salida
             OutputFormat format = new OutputFormat(doc);
             //Especifica que la salida este indentada
@@ -172,42 +172,4 @@ public class DOM {
             return -1;
         }
     }
-
-    private void cambiarTituloLibro(Node node, String tituloAntiguo, String tituloNuevo) {
-        //Este metodo lee el titulo de un libro y lo intercambia por el titulo nuevo
-        String titulo;//string referente al titulo sacado del nodo
-        Node n;
-        //Cogelos los nodos hijos (titulo y autor) para luego elegir el titulo
-        NodeList nodos = node.getChildNodes();
-
-        //cogemos el titulo
-        n = nodos.item(1);//el titulo es el 1
-        if (n.getNodeType() == Node.ELEMENT_NODE) {
-
-            titulo = n.getFirstChild().getNodeValue();
-            //Si el titulo cogido del archivo xml es igual al escrito en titulo antiguo se ejecuta este if
-            if (tituloAntiguo.equals(titulo)) {
-                n.getFirstChild().setNodeValue(tituloNuevo);
-            }
-        }
-    }
-
-    public void modificarDOMparaTituloLibro(String tituloDOM_Antiguo, String tituloDOM_nuevo) {
-        //Este metodo recorre el DOM de libros XML y mira los titulos
-        Node node;
-
-        Node raiz = doc.getFirstChild();
-
-        NodeList nodeList = raiz.getChildNodes();
-        //recorre el DOM (es como el recorrer DOM pero con un if extra y añadidos
-        for (int i = 0; i < nodeList.getLength(); i++) {
-            node = nodeList.item(i);
-            //Aqui se ejecuta cambiarTituloLibro con el node del for
-            if (node.getNodeType() == Node.ELEMENT_NODE) {
-                cambiarTituloLibro(node, tituloDOM_Antiguo, tituloDOM_nuevo);
-            }
-        }
-
-    }
-
 }
